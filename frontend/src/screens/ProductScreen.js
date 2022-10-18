@@ -6,8 +6,9 @@ import Rating from "../components/Rating";
 import products from "../products";
 
 function ProductScreen() {
-	const { params } = useParams();
-	const product = products.find((p) => p._id === params.id);
+	const params = useParams();
+	// eslint-disable-next-line eqeqeq
+	const product = products.find((p) => p._id == params.id);
 	return (
 		<div>
 			<Link to="/" className="btn btn-light my-3">
